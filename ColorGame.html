@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .button {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    display: block;
+    border: 2px solid #686868;
+  }
+
+  .canvas {
+    display: flex;
+    width: 700px;
+    margin: 0px auto;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+
+  #grey {
+    background-color: ghostwhite;
+  }
+
+  #white {
+    background-color: white;
+  }
+
+  #blue {
+    background-color: blue;
+  }
+
+  #yellow {
+    background-color: yellow;
+  }
+
+  #purple {
+    background-color: purple;
+  }
+
+  .canvas>div {
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+
+  }
+</style>
+
+<body class="bg-main">
+  <h1 style="align-items: center">Color Scheme Switcher</h1>
+  <div class="canvas">
+    <div class="button" id="grey">
+      Grey
+    </div>
+    <div class="button" id="yellow">
+      Yellow
+    </div>
+    <div class="button" id="white">
+      white
+    </div>
+    <div class="button" style="color:white;" id="blue">
+      Blue
+    </div>
+    <div class="button" style="color:white;" id="purple">
+      Purple
+    </div>
+  </div>
+  <h2>
+    Try cliciking on one of the the color above
+    <span> To change the background color of this page .</span>
+  </h2>
+</body>
+<script>
+  const buttons = document.querySelectorAll(".button");
+  const body = document.querySelector("body");
+
+  buttons.forEach(function (button) {
+    console.log(button);
+    button.addEventListener("click", function (e) {
+      console.log(e);
+
+      //////////////// Using the switch statement//////////////////////
+
+      // console.log(e.target);
+      // if        (e.target.id === "grey") {
+      //   body.style.backgroundColor = e.target.id;
+      // } else if (e.target.id === "white") {
+      //   body.style.backgroundColor = e.target.id;
+      // } else if (e.target.id === "blue") {
+      //   body.style.backgroundColor = e.target.id;
+      // } else if (e.target.id === "yellow") {
+      //   body.style.backgroundColor = e.target.id;
+      // } else if(e.target.id === "purple")  {
+      //     body.style.backgroundColor = e.target.id;
+      // }
+      switch (e.target.id) {
+        case (e.target.id = "grey"):
+          body.style.backgroundColor = e.target.id;
+
+          break;
+        case (e.target.id = "blue"):
+          body.style.backgroundColor = e.target.id;
+
+          break;
+        case (e.target.id = "yellow"):
+          body.style.backgroundColor = e.target.id;
+
+          break;
+        case (e.target.id = "purple"):
+          body.style.backgroundColor = e.target.id;
+
+          break;
+        case (e.target.id = "white"):
+          body.style.backgroundColor = e.target.id;
+
+          break;
+      }
+    });
+  });
+</script>
+
+</html>
